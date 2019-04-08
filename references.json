@@ -1,0 +1,19 @@
+{
+    "online-references":[{
+        "url":"https://wiki.qt.io/Using_CMake_build_system",
+        "contribution":"Implementing the cmake file",
+        "file":"CMakeLists.txt"
+    }],
+    "colleagues":[
+        {
+            "jacobs-id": "g.adilbish",
+            "contribution": "Basic UI development",
+            "file": ""
+        },
+        {
+            "jacobs-id": "f.manana",
+            "contribution": "Documentation, Testing and Structure",
+            "file": ""
+        }
+    ]
+}

@@ -1,0 +1,257 @@
+\hypertarget{classPencil__Inventory}{}\section{Pencil\+\_\+\+Inventory Class Reference}
+\label{classPencil__Inventory}\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+
+
+The \hyperlink{classPencil__Inventory}{Pencil\+\_\+\+Inventory} class main class for managing pencil prices and production.  
+
+
+
+
+{\ttfamily \#include $<$pencil\+\_\+inventory.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPencil__Inventory_a68480c5a7aa85cee3cb19619115ad552}{Pencil\+\_\+\+Inventory} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classPencil__Inventory_a68480c5a7aa85cee3cb19619115ad552}{Pencil\+\_\+\+Inventory\+::\+Pencil\+\_\+\+Inventory} constructor for \hyperlink{classPencil__Inventory}{Pencil\+\_\+\+Inventory} class. \end{DoxyCompactList}\item 
+float \hyperlink{classPencil__Inventory_a0ce9e6370396e24ae4d11b27b84c7160}{get\+Price} () const
+\begin{DoxyCompactList}\small\item\em returns the price of a pencil \end{DoxyCompactList}\item 
+int \hyperlink{classPencil__Inventory_a493a0967a8369d5b8c3e3709eeb21b5e}{get\+Amount} () const
+\begin{DoxyCompactList}\small\item\em returns the number of pencils in inventory \end{DoxyCompactList}\item 
+float \hyperlink{classPencil__Inventory_ac9bab24db01e4515abe06a3c5ec48fcf}{get\+Public\+Demand} () const
+\begin{DoxyCompactList}\small\item\em returns the public demand of pencils \end{DoxyCompactList}\item 
+int \hyperlink{classPencil__Inventory_ad7efa852dea32675f689e36c0ddfd7a7}{get\+Total\+Number\+Of\+Pencils\+Produced} () const
+\begin{DoxyCompactList}\small\item\em returns the total number of pencils produced \end{DoxyCompactList}\item 
+int \hyperlink{classPencil__Inventory_a3cd52fbcbd4e3bedbcbe2031cb9a3286}{get\+Number\+Of\+Pencils\+To\+Be\+Sold} () const
+\item 
+void \hyperlink{classPencil__Inventory_a7c9e758743530d09b95cd691181d078f}{increase\+Price} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classPencil__Inventory_a7c9e758743530d09b95cd691181d078f}{Pencil\+\_\+\+Inventory\+::increase\+Price} increase the price of pencils. \end{DoxyCompactList}\item 
+void \hyperlink{classPencil__Inventory_a711d64e733cd5b67ea3aeb0ccdda0870}{decrease\+Price} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classPencil__Inventory_a711d64e733cd5b67ea3aeb0ccdda0870}{Pencil\+\_\+\+Inventory\+::decrease\+Price} decrease the price of pencils. \end{DoxyCompactList}\item 
+bool \hyperlink{classPencil__Inventory_a5c8d580bd32a2ef4b2196da7570203bf}{can\+Decrease\+Price} () const
+\begin{DoxyCompactList}\small\item\em \hyperlink{classPencil__Inventory_a5c8d580bd32a2ef4b2196da7570203bf}{Pencil\+\_\+\+Inventory\+::can\+Decrease\+Price} checks if the price can be decreased without resulting in a negative price. \end{DoxyCompactList}\item 
+void \hyperlink{classPencil__Inventory_a1ed4fd3f13785ba2a93c9f4045a5cbc7}{sell\+Pencil} (\hyperlink{classWallet}{Wallet} \&, int n=1)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classPencil__Inventory_a1ed4fd3f13785ba2a93c9f4045a5cbc7}{Pencil\+\_\+\+Inventory\+::sell\+Pencil} the function checks if there are pencils to sell and then decrements the number of pencils in the inventory by n. \hyperlink{classWallet}{Wallet} is then credited by the price of n pencils. \end{DoxyCompactList}\item 
+bool \hyperlink{classPencil__Inventory_ab8c12609e21dfd98269e6d4589b13a1c}{can\+Sell\+Pencil} (int n=1) const
+\begin{DoxyCompactList}\small\item\em returns true if there are pencils to sell, false otherwise \end{DoxyCompactList}\item 
+void \hyperlink{classPencil__Inventory_a9cfd91ef9a8335d1b6448e78137cf3bd}{produce\+Pencil} (\hyperlink{classGraphite__Inventory}{Graphite\+\_\+\+Inventory} \&, \hyperlink{classWood__Inventory}{Wood\+\_\+\+Inventory} \&, int n=1)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classPencil__Inventory_a9cfd91ef9a8335d1b6448e78137cf3bd}{Pencil\+\_\+\+Inventory\+::produce\+Pencil} checks if there is enough material to produce n pencils. If true consumes graphite and wood for n pencils and increments the number of pencils in the inventory and total\+Number\+Of\+Pencils\+Produced by n. \end{DoxyCompactList}\item 
+bool \hyperlink{classPencil__Inventory_a9026f7bf1a45e41aebea2e39f6edfdff}{can\+Produce\+Pencil} (\hyperlink{classGraphite__Inventory}{Graphite\+\_\+\+Inventory} \&, \hyperlink{classWood__Inventory}{Wood\+\_\+\+Inventory} \&, int n=1) const
+\begin{DoxyCompactList}\small\item\em returns true if there is enough material to produce n pencils, false otherwise \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const float \hyperlink{classPencil__Inventory_a063e85195a84875c4b3f42c2f01ebdbd}{change} = 0.\+05f
+\item 
+float \hyperlink{classPencil__Inventory_a833632ab57afc00b148d106c43a6729e}{price}
+\begin{DoxyCompactList}\small\item\em the price of a pencil \end{DoxyCompactList}\item 
+int \hyperlink{classPencil__Inventory_a19f4ff72e64dbd5c5fbb1fd302b54c85}{amount}
+\begin{DoxyCompactList}\small\item\em the number of pencils in the inventory \end{DoxyCompactList}\item 
+int \hyperlink{classPencil__Inventory_ac7f37f56e5e1a630cf24e436aac27cee}{total\+Number\+Of\+Pencils\+Produced}
+\begin{DoxyCompactList}\small\item\em the total number fo pencils produced \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classPencil__Inventory}{Pencil\+\_\+\+Inventory} class main class for managing pencil prices and production. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPencil__Inventory_a68480c5a7aa85cee3cb19619115ad552}\label{classPencil__Inventory_a68480c5a7aa85cee3cb19619115ad552}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{Pencil\+\_\+\+Inventory()}{Pencil\_Inventory()}}
+{\footnotesize\ttfamily Pencil\+\_\+\+Inventory\+::\+Pencil\+\_\+\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classPencil__Inventory_a68480c5a7aa85cee3cb19619115ad552}{Pencil\+\_\+\+Inventory\+::\+Pencil\+\_\+\+Inventory} constructor for \hyperlink{classPencil__Inventory}{Pencil\+\_\+\+Inventory} class. 
+
+\begin{DoxyNote}{Note}
+starts with default values\+:~\newline
+ price = \$1.\+00~\newline
+ number of pencils = 0~\newline
+ number of pencils produced = 0~\newline
+
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classPencil__Inventory_a5c8d580bd32a2ef4b2196da7570203bf}\label{classPencil__Inventory_a5c8d580bd32a2ef4b2196da7570203bf}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!can\+Decrease\+Price@{can\+Decrease\+Price}}
+\index{can\+Decrease\+Price@{can\+Decrease\+Price}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{can\+Decrease\+Price()}{canDecreasePrice()}}
+{\footnotesize\ttfamily bool Pencil\+\_\+\+Inventory\+::can\+Decrease\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\hyperlink{classPencil__Inventory_a5c8d580bd32a2ef4b2196da7570203bf}{Pencil\+\_\+\+Inventory\+::can\+Decrease\+Price} checks if the price can be decreased without resulting in a negative price. 
+
+\begin{DoxyReturn}{Returns}
+true if new price is positive, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPencil__Inventory_a9026f7bf1a45e41aebea2e39f6edfdff}\label{classPencil__Inventory_a9026f7bf1a45e41aebea2e39f6edfdff}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!can\+Produce\+Pencil@{can\+Produce\+Pencil}}
+\index{can\+Produce\+Pencil@{can\+Produce\+Pencil}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{can\+Produce\+Pencil()}{canProducePencil()}}
+{\footnotesize\ttfamily bool Pencil\+\_\+\+Inventory\+::can\+Produce\+Pencil (\begin{DoxyParamCaption}\item[{\hyperlink{classGraphite__Inventory}{Graphite\+\_\+\+Inventory} \&}]{graphite\+Inventory,  }\item[{\hyperlink{classWood__Inventory}{Wood\+\_\+\+Inventory} \&}]{wood\+Inventory,  }\item[{int}]{n = {\ttfamily 1} }\end{DoxyParamCaption}) const}
+
+
+
+returns true if there is enough material to produce n pencils, false otherwise 
+
+\mbox{\Hypertarget{classPencil__Inventory_ab8c12609e21dfd98269e6d4589b13a1c}\label{classPencil__Inventory_ab8c12609e21dfd98269e6d4589b13a1c}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!can\+Sell\+Pencil@{can\+Sell\+Pencil}}
+\index{can\+Sell\+Pencil@{can\+Sell\+Pencil}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{can\+Sell\+Pencil()}{canSellPencil()}}
+{\footnotesize\ttfamily bool Pencil\+\_\+\+Inventory\+::can\+Sell\+Pencil (\begin{DoxyParamCaption}\item[{int}]{n = {\ttfamily 1} }\end{DoxyParamCaption}) const}
+
+
+
+returns true if there are pencils to sell, false otherwise 
+
+\mbox{\Hypertarget{classPencil__Inventory_a711d64e733cd5b67ea3aeb0ccdda0870}\label{classPencil__Inventory_a711d64e733cd5b67ea3aeb0ccdda0870}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!decrease\+Price@{decrease\+Price}}
+\index{decrease\+Price@{decrease\+Price}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{decrease\+Price()}{decreasePrice()}}
+{\footnotesize\ttfamily void Pencil\+\_\+\+Inventory\+::decrease\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classPencil__Inventory_a711d64e733cd5b67ea3aeb0ccdda0870}{Pencil\+\_\+\+Inventory\+::decrease\+Price} decrease the price of pencils. 
+
+\mbox{\Hypertarget{classPencil__Inventory_a493a0967a8369d5b8c3e3709eeb21b5e}\label{classPencil__Inventory_a493a0967a8369d5b8c3e3709eeb21b5e}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!get\+Amount@{get\+Amount}}
+\index{get\+Amount@{get\+Amount}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{get\+Amount()}{getAmount()}}
+{\footnotesize\ttfamily int Pencil\+\_\+\+Inventory\+::get\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+returns the number of pencils in inventory 
+
+\mbox{\Hypertarget{classPencil__Inventory_a3cd52fbcbd4e3bedbcbe2031cb9a3286}\label{classPencil__Inventory_a3cd52fbcbd4e3bedbcbe2031cb9a3286}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!get\+Number\+Of\+Pencils\+To\+Be\+Sold@{get\+Number\+Of\+Pencils\+To\+Be\+Sold}}
+\index{get\+Number\+Of\+Pencils\+To\+Be\+Sold@{get\+Number\+Of\+Pencils\+To\+Be\+Sold}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{get\+Number\+Of\+Pencils\+To\+Be\+Sold()}{getNumberOfPencilsToBeSold()}}
+{\footnotesize\ttfamily int Pencil\+\_\+\+Inventory\+::get\+Number\+Of\+Pencils\+To\+Be\+Sold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classPencil__Inventory_a0ce9e6370396e24ae4d11b27b84c7160}\label{classPencil__Inventory_a0ce9e6370396e24ae4d11b27b84c7160}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!get\+Price@{get\+Price}}
+\index{get\+Price@{get\+Price}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{get\+Price()}{getPrice()}}
+{\footnotesize\ttfamily float Pencil\+\_\+\+Inventory\+::get\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+returns the price of a pencil 
+
+\mbox{\Hypertarget{classPencil__Inventory_ac9bab24db01e4515abe06a3c5ec48fcf}\label{classPencil__Inventory_ac9bab24db01e4515abe06a3c5ec48fcf}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!get\+Public\+Demand@{get\+Public\+Demand}}
+\index{get\+Public\+Demand@{get\+Public\+Demand}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{get\+Public\+Demand()}{getPublicDemand()}}
+{\footnotesize\ttfamily float Pencil\+\_\+\+Inventory\+::get\+Public\+Demand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+returns the public demand of pencils 
+
+\mbox{\Hypertarget{classPencil__Inventory_ad7efa852dea32675f689e36c0ddfd7a7}\label{classPencil__Inventory_ad7efa852dea32675f689e36c0ddfd7a7}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!get\+Total\+Number\+Of\+Pencils\+Produced@{get\+Total\+Number\+Of\+Pencils\+Produced}}
+\index{get\+Total\+Number\+Of\+Pencils\+Produced@{get\+Total\+Number\+Of\+Pencils\+Produced}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{get\+Total\+Number\+Of\+Pencils\+Produced()}{getTotalNumberOfPencilsProduced()}}
+{\footnotesize\ttfamily int Pencil\+\_\+\+Inventory\+::get\+Total\+Number\+Of\+Pencils\+Produced (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+returns the total number of pencils produced 
+
+\mbox{\Hypertarget{classPencil__Inventory_a7c9e758743530d09b95cd691181d078f}\label{classPencil__Inventory_a7c9e758743530d09b95cd691181d078f}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!increase\+Price@{increase\+Price}}
+\index{increase\+Price@{increase\+Price}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{increase\+Price()}{increasePrice()}}
+{\footnotesize\ttfamily void Pencil\+\_\+\+Inventory\+::increase\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classPencil__Inventory_a7c9e758743530d09b95cd691181d078f}{Pencil\+\_\+\+Inventory\+::increase\+Price} increase the price of pencils. 
+
+\mbox{\Hypertarget{classPencil__Inventory_a9cfd91ef9a8335d1b6448e78137cf3bd}\label{classPencil__Inventory_a9cfd91ef9a8335d1b6448e78137cf3bd}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!produce\+Pencil@{produce\+Pencil}}
+\index{produce\+Pencil@{produce\+Pencil}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{produce\+Pencil()}{producePencil()}}
+{\footnotesize\ttfamily void Pencil\+\_\+\+Inventory\+::produce\+Pencil (\begin{DoxyParamCaption}\item[{\hyperlink{classGraphite__Inventory}{Graphite\+\_\+\+Inventory} \&}]{graphite\+Inventory,  }\item[{\hyperlink{classWood__Inventory}{Wood\+\_\+\+Inventory} \&}]{wood\+Inventory,  }\item[{int}]{n = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classPencil__Inventory_a9cfd91ef9a8335d1b6448e78137cf3bd}{Pencil\+\_\+\+Inventory\+::produce\+Pencil} checks if there is enough material to produce n pencils. If true consumes graphite and wood for n pencils and increments the number of pencils in the inventory and total\+Number\+Of\+Pencils\+Produced by n. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graphite\+Inventory} & the amount of graphite in the inverntory \\
+\hline
+{\em wood\+Inventory} & the amount of wood in the inventory \\
+\hline
+{\em n} & the number of pencils to produce \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPencil__Inventory_a1ed4fd3f13785ba2a93c9f4045a5cbc7}\label{classPencil__Inventory_a1ed4fd3f13785ba2a93c9f4045a5cbc7}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!sell\+Pencil@{sell\+Pencil}}
+\index{sell\+Pencil@{sell\+Pencil}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{sell\+Pencil()}{sellPencil()}}
+{\footnotesize\ttfamily void Pencil\+\_\+\+Inventory\+::sell\+Pencil (\begin{DoxyParamCaption}\item[{\hyperlink{classWallet}{Wallet} \&}]{w,  }\item[{int}]{n = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classPencil__Inventory_a1ed4fd3f13785ba2a93c9f4045a5cbc7}{Pencil\+\_\+\+Inventory\+::sell\+Pencil} the function checks if there are pencils to sell and then decrements the number of pencils in the inventory by n. \hyperlink{classWallet}{Wallet} is then credited by the price of n pencils. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & wallet \\
+\hline
+{\em n} & the number of pencils to sell. Default value is 1. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classPencil__Inventory_a19f4ff72e64dbd5c5fbb1fd302b54c85}\label{classPencil__Inventory_a19f4ff72e64dbd5c5fbb1fd302b54c85}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!amount@{amount}}
+\index{amount@{amount}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{amount}{amount}}
+{\footnotesize\ttfamily int Pencil\+\_\+\+Inventory\+::amount\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+the number of pencils in the inventory 
+
+\mbox{\Hypertarget{classPencil__Inventory_a063e85195a84875c4b3f42c2f01ebdbd}\label{classPencil__Inventory_a063e85195a84875c4b3f42c2f01ebdbd}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!change@{change}}
+\index{change@{change}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{change}{change}}
+{\footnotesize\ttfamily const float Pencil\+\_\+\+Inventory\+::change = 0.\+05f\hspace{0.3cm}{\ttfamily [private]}}
+
+steps to increase/decrease the price of a pencil. Default value set to \$0.\+05 \mbox{\Hypertarget{classPencil__Inventory_a833632ab57afc00b148d106c43a6729e}\label{classPencil__Inventory_a833632ab57afc00b148d106c43a6729e}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!price@{price}}
+\index{price@{price}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{price}{price}}
+{\footnotesize\ttfamily float Pencil\+\_\+\+Inventory\+::price\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+the price of a pencil 
+
+\mbox{\Hypertarget{classPencil__Inventory_ac7f37f56e5e1a630cf24e436aac27cee}\label{classPencil__Inventory_ac7f37f56e5e1a630cf24e436aac27cee}} 
+\index{Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}!total\+Number\+Of\+Pencils\+Produced@{total\+Number\+Of\+Pencils\+Produced}}
+\index{total\+Number\+Of\+Pencils\+Produced@{total\+Number\+Of\+Pencils\+Produced}!Pencil\+\_\+\+Inventory@{Pencil\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{total\+Number\+Of\+Pencils\+Produced}{totalNumberOfPencilsProduced}}
+{\footnotesize\ttfamily int Pencil\+\_\+\+Inventory\+::total\+Number\+Of\+Pencils\+Produced\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+the total number fo pencils produced 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/mnt/0896595996594878/\+Users/\+Maverick/\+Documents/\+University/\+School/\+Modules/4th Semester/\+Applied Computer Science/\+Software Eng/\+Project/\+Sprint\+\_\+02/se-\/02-\/team-\/09/\+Pencil-\/\+Producer/\hyperlink{pencil__inventory_8h}{pencil\+\_\+inventory.\+h}\item 
+/mnt/0896595996594878/\+Users/\+Maverick/\+Documents/\+University/\+School/\+Modules/4th Semester/\+Applied Computer Science/\+Software Eng/\+Project/\+Sprint\+\_\+02/se-\/02-\/team-\/09/\+Pencil-\/\+Producer/\hyperlink{pencil__inventory_8cpp}{pencil\+\_\+inventory.\+cpp}\end{DoxyCompactItemize}

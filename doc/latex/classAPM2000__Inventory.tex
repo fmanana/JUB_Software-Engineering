@@ -1,0 +1,176 @@
+\hypertarget{classAPM2000__Inventory}{}\section{A\+P\+M2000\+\_\+\+Inventory Class Reference}
+\label{classAPM2000__Inventory}\index{A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}}
+
+
+The \hyperlink{classAPM2000__Inventory}{A\+P\+M2000\+\_\+\+Inventory} class Automatic Pencil Machine(\+A\+P\+M)~\newline
+Suffix \char`\"{}2000\char`\"{} indicates 2000-\/series. Every 2000-\/series produces 2 pencils per second, which are automatically added into the inventory. A\+PM stops automatically when there are insufficient materials and resumes when materials are available.  
+
+
+
+
+{\ttfamily \#include $<$apm2000\+\_\+inventory.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAPM2000__Inventory_a0aa6a0abe496ccd0ee773c4a3ce38a2c}{A\+P\+M2000\+\_\+\+Inventory} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classAPM2000__Inventory_a0aa6a0abe496ccd0ee773c4a3ce38a2c}{A\+P\+M2000\+\_\+\+Inventory\+::\+A\+P\+M2000\+\_\+\+Inventory} \hyperlink{classAPM2000__Inventory}{A\+P\+M2000\+\_\+\+Inventory} constructor.~\newline
+Default values\+:~\newline
+number = 0~\newline
+price = \$150.\+00. \end{DoxyCompactList}\item 
+void \hyperlink{classAPM2000__Inventory_a5f89890fced248efa0792e0ac062e9e2}{buy\+A\+P\+M2000} (\hyperlink{classWallet}{Wallet} \&)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classAPM2000__Inventory_a5f89890fced248efa0792e0ac062e9e2}{A\+P\+M2000\+\_\+\+Inventory\+::buy\+A\+P\+M2000} If can\+Buy\+A\+P\+M2000 evaluates to true, bank balance is debited, the number of A\+P\+Ms in inventory increases by 1 and the A\+PM price is updated. \end{DoxyCompactList}\item 
+bool \hyperlink{classAPM2000__Inventory_a8edb69c3a8614e7b709605f59a3c409b}{can\+Buy\+A\+P\+M2000} (\hyperlink{classWallet}{Wallet} \&)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classAPM2000__Inventory_a8edb69c3a8614e7b709605f59a3c409b}{A\+P\+M2000\+\_\+\+Inventory\+::can\+Buy\+A\+P\+M2000} checks if wallet balance has enough for new A\+PM and if the number of A\+P\+Ms in inventory is less than the max (10). \end{DoxyCompactList}\item 
+void \hyperlink{classAPM2000__Inventory_ad7ffc7e7536509d26d76800b2398bfc0}{produce\+Pencil} (\hyperlink{classPencil__Inventory}{Pencil\+\_\+\+Inventory} \&, \hyperlink{classGraphite__Inventory}{Graphite\+\_\+\+Inventory} \&, \hyperlink{classWood__Inventory}{Wood\+\_\+\+Inventory} \&)
+\item 
+bool \hyperlink{classAPM2000__Inventory_a57eae269c4c67d3133175d6006373d2b}{can\+Produce\+Pencil} (\hyperlink{classPencil__Inventory}{Pencil\+\_\+\+Inventory} \&, \hyperlink{classGraphite__Inventory}{Graphite\+\_\+\+Inventory} \&, \hyperlink{classWood__Inventory}{Wood\+\_\+\+Inventory} \&)
+\item 
+int \hyperlink{classAPM2000__Inventory_a9a9bacffea28885b6c268d9a3bcab401}{get\+Number} () const
+\begin{DoxyCompactList}\small\item\em returns number of A\+P\+Ms in inventory \end{DoxyCompactList}\item 
+float \hyperlink{classAPM2000__Inventory_a65388780b7aa2066cfaf86c85d501765}{get\+Price} () const
+\begin{DoxyCompactList}\small\item\em returns price of A\+PM \end{DoxyCompactList}\item 
+int \hyperlink{classAPM2000__Inventory_ab20a0adafade1bdefea0e8d8c6b271a0}{get\+Rate} () const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{classAPM2000__Inventory_a098109b5a53ce171fb405e552bf056b2}{max} = 10
+\begin{DoxyCompactList}\small\item\em maximum number of A\+P\+Ms allowed \end{DoxyCompactList}\item 
+int \hyperlink{classAPM2000__Inventory_a0393939ee2dd57ec3855bb98070da2ad}{number}
+\begin{DoxyCompactList}\small\item\em number of A\+P\+Ms in your inventory \end{DoxyCompactList}\item 
+float \hyperlink{classAPM2000__Inventory_a56588e2f627cbe3fccf6235773d77889}{price}
+\begin{DoxyCompactList}\small\item\em price of A\+PM \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classAPM2000__Inventory}{A\+P\+M2000\+\_\+\+Inventory} class Automatic Pencil Machine(\+A\+P\+M)~\newline
+Suffix \char`\"{}2000\char`\"{} indicates 2000-\/series. Every 2000-\/series produces 2 pencils per second, which are automatically added into the inventory. A\+PM stops automatically when there are insufficient materials and resumes when materials are available. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAPM2000__Inventory_a0aa6a0abe496ccd0ee773c4a3ce38a2c}\label{classAPM2000__Inventory_a0aa6a0abe496ccd0ee773c4a3ce38a2c}} 
+\index{A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}!A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}}
+\index{A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}!A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{A\+P\+M2000\+\_\+\+Inventory()}{APM2000\_Inventory()}}
+{\footnotesize\ttfamily A\+P\+M2000\+\_\+\+Inventory\+::\+A\+P\+M2000\+\_\+\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classAPM2000__Inventory_a0aa6a0abe496ccd0ee773c4a3ce38a2c}{A\+P\+M2000\+\_\+\+Inventory\+::\+A\+P\+M2000\+\_\+\+Inventory} \hyperlink{classAPM2000__Inventory}{A\+P\+M2000\+\_\+\+Inventory} constructor.~\newline
+Default values\+:~\newline
+number = 0~\newline
+price = \$150.\+00. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classAPM2000__Inventory_a5f89890fced248efa0792e0ac062e9e2}\label{classAPM2000__Inventory_a5f89890fced248efa0792e0ac062e9e2}} 
+\index{A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}!buy\+A\+P\+M2000@{buy\+A\+P\+M2000}}
+\index{buy\+A\+P\+M2000@{buy\+A\+P\+M2000}!A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{buy\+A\+P\+M2000()}{buyAPM2000()}}
+{\footnotesize\ttfamily void A\+P\+M2000\+\_\+\+Inventory\+::buy\+A\+P\+M2000 (\begin{DoxyParamCaption}\item[{\hyperlink{classWallet}{Wallet} \&}]{wallet }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classAPM2000__Inventory_a5f89890fced248efa0792e0ac062e9e2}{A\+P\+M2000\+\_\+\+Inventory\+::buy\+A\+P\+M2000} If can\+Buy\+A\+P\+M2000 evaluates to true, bank balance is debited, the number of A\+P\+Ms in inventory increases by 1 and the A\+PM price is updated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wallet} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAPM2000__Inventory_a8edb69c3a8614e7b709605f59a3c409b}\label{classAPM2000__Inventory_a8edb69c3a8614e7b709605f59a3c409b}} 
+\index{A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}!can\+Buy\+A\+P\+M2000@{can\+Buy\+A\+P\+M2000}}
+\index{can\+Buy\+A\+P\+M2000@{can\+Buy\+A\+P\+M2000}!A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{can\+Buy\+A\+P\+M2000()}{canBuyAPM2000()}}
+{\footnotesize\ttfamily bool A\+P\+M2000\+\_\+\+Inventory\+::can\+Buy\+A\+P\+M2000 (\begin{DoxyParamCaption}\item[{\hyperlink{classWallet}{Wallet} \&}]{wallet }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classAPM2000__Inventory_a8edb69c3a8614e7b709605f59a3c409b}{A\+P\+M2000\+\_\+\+Inventory\+::can\+Buy\+A\+P\+M2000} checks if wallet balance has enough for new A\+PM and if the number of A\+P\+Ms in inventory is less than the max (10). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wallet} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true conditions are met, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAPM2000__Inventory_a57eae269c4c67d3133175d6006373d2b}\label{classAPM2000__Inventory_a57eae269c4c67d3133175d6006373d2b}} 
+\index{A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}!can\+Produce\+Pencil@{can\+Produce\+Pencil}}
+\index{can\+Produce\+Pencil@{can\+Produce\+Pencil}!A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{can\+Produce\+Pencil()}{canProducePencil()}}
+{\footnotesize\ttfamily bool A\+P\+M2000\+\_\+\+Inventory\+::can\+Produce\+Pencil (\begin{DoxyParamCaption}\item[{\hyperlink{classPencil__Inventory}{Pencil\+\_\+\+Inventory} \&}]{pencil\+Inventory,  }\item[{\hyperlink{classGraphite__Inventory}{Graphite\+\_\+\+Inventory} \&}]{graphite\+Inventory,  }\item[{\hyperlink{classWood__Inventory}{Wood\+\_\+\+Inventory} \&}]{wood\+Inventory }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classAPM2000__Inventory_a9a9bacffea28885b6c268d9a3bcab401}\label{classAPM2000__Inventory_a9a9bacffea28885b6c268d9a3bcab401}} 
+\index{A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}!get\+Number@{get\+Number}}
+\index{get\+Number@{get\+Number}!A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{get\+Number()}{getNumber()}}
+{\footnotesize\ttfamily int A\+P\+M2000\+\_\+\+Inventory\+::get\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+returns number of A\+P\+Ms in inventory 
+
+\mbox{\Hypertarget{classAPM2000__Inventory_a65388780b7aa2066cfaf86c85d501765}\label{classAPM2000__Inventory_a65388780b7aa2066cfaf86c85d501765}} 
+\index{A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}!get\+Price@{get\+Price}}
+\index{get\+Price@{get\+Price}!A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{get\+Price()}{getPrice()}}
+{\footnotesize\ttfamily float A\+P\+M2000\+\_\+\+Inventory\+::get\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+returns price of A\+PM 
+
+\mbox{\Hypertarget{classAPM2000__Inventory_ab20a0adafade1bdefea0e8d8c6b271a0}\label{classAPM2000__Inventory_ab20a0adafade1bdefea0e8d8c6b271a0}} 
+\index{A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}!get\+Rate@{get\+Rate}}
+\index{get\+Rate@{get\+Rate}!A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{get\+Rate()}{getRate()}}
+{\footnotesize\ttfamily int A\+P\+M2000\+\_\+\+Inventory\+::get\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classAPM2000__Inventory_ad7ffc7e7536509d26d76800b2398bfc0}\label{classAPM2000__Inventory_ad7ffc7e7536509d26d76800b2398bfc0}} 
+\index{A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}!produce\+Pencil@{produce\+Pencil}}
+\index{produce\+Pencil@{produce\+Pencil}!A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{produce\+Pencil()}{producePencil()}}
+{\footnotesize\ttfamily void A\+P\+M2000\+\_\+\+Inventory\+::produce\+Pencil (\begin{DoxyParamCaption}\item[{\hyperlink{classPencil__Inventory}{Pencil\+\_\+\+Inventory} \&}]{pencil\+Inventory,  }\item[{\hyperlink{classGraphite__Inventory}{Graphite\+\_\+\+Inventory} \&}]{graphite\+Inventory,  }\item[{\hyperlink{classWood__Inventory}{Wood\+\_\+\+Inventory} \&}]{wood\+Inventory }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classAPM2000__Inventory_a098109b5a53ce171fb405e552bf056b2}\label{classAPM2000__Inventory_a098109b5a53ce171fb405e552bf056b2}} 
+\index{A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}!max@{max}}
+\index{max@{max}!A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily const int A\+P\+M2000\+\_\+\+Inventory\+::max = 10\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+maximum number of A\+P\+Ms allowed 
+
+\mbox{\Hypertarget{classAPM2000__Inventory_a0393939ee2dd57ec3855bb98070da2ad}\label{classAPM2000__Inventory_a0393939ee2dd57ec3855bb98070da2ad}} 
+\index{A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}!number@{number}}
+\index{number@{number}!A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{number}{number}}
+{\footnotesize\ttfamily int A\+P\+M2000\+\_\+\+Inventory\+::number\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+number of A\+P\+Ms in your inventory 
+
+\mbox{\Hypertarget{classAPM2000__Inventory_a56588e2f627cbe3fccf6235773d77889}\label{classAPM2000__Inventory_a56588e2f627cbe3fccf6235773d77889}} 
+\index{A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}!price@{price}}
+\index{price@{price}!A\+P\+M2000\+\_\+\+Inventory@{A\+P\+M2000\+\_\+\+Inventory}}
+\subsubsection{\texorpdfstring{price}{price}}
+{\footnotesize\ttfamily float A\+P\+M2000\+\_\+\+Inventory\+::price\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+price of A\+PM 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/mnt/0896595996594878/\+Users/\+Maverick/\+Documents/\+University/\+School/\+Modules/4th Semester/\+Applied Computer Science/\+Software Eng/\+Project/\+Sprint\+\_\+02/se-\/02-\/team-\/09/\+Pencil-\/\+Producer/\hyperlink{apm2000__inventory_8h}{apm2000\+\_\+inventory.\+h}\item 
+/mnt/0896595996594878/\+Users/\+Maverick/\+Documents/\+University/\+School/\+Modules/4th Semester/\+Applied Computer Science/\+Software Eng/\+Project/\+Sprint\+\_\+02/se-\/02-\/team-\/09/\+Pencil-\/\+Producer/\hyperlink{apm2000__inventory_8cpp}{apm2000\+\_\+inventory.\+cpp}\end{DoxyCompactItemize}

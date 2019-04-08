@@ -1,0 +1,148 @@
+\hypertarget{classWallet}{}\section{Wallet Class Reference}
+\label{classWallet}\index{Wallet@{Wallet}}
+
+
+The \hyperlink{classWallet}{Wallet} class keeps track of bank balance and methods for crediting/debiting account.  
+
+
+
+
+{\ttfamily \#include $<$wallet.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classWallet_ad9be9e49244b78db9099fcaeccd1af04}{Wallet} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{classWallet_ad9be9e49244b78db9099fcaeccd1af04}{Wallet\+::\+Wallet} wallet constructor. Default balance \$145.\+00. \end{DoxyCompactList}\item 
+float \hyperlink{classWallet_a92536035a1de76dc7842693beb93cd24}{get\+Bank\+Balance} () const
+\begin{DoxyCompactList}\small\item\em \hyperlink{classWallet_a92536035a1de76dc7842693beb93cd24}{Wallet\+::get\+Bank\+Balance}. \end{DoxyCompactList}\item 
+void \hyperlink{classWallet_ab9354b0a8250c0f21b867cc725a33e1e}{credit\+Money} (float)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classWallet_ab9354b0a8250c0f21b867cc725a33e1e}{Wallet\+::credit\+Money} credits bank balance. \end{DoxyCompactList}\item 
+void \hyperlink{classWallet_a8be722d227a610e4b36b79c2eb04c73f}{debit\+Money} (float)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classWallet_a8be722d227a610e4b36b79c2eb04c73f}{Wallet\+::debit\+Money} debits bank balance. \end{DoxyCompactList}\item 
+bool \hyperlink{classWallet_a69b488bc31201592bb860b6fdaafa1b8}{can\+Credit\+Money} (float) const
+\begin{DoxyCompactList}\small\item\em \hyperlink{classWallet_a69b488bc31201592bb860b6fdaafa1b8}{Wallet\+::can\+Credit\+Money}. \end{DoxyCompactList}\item 
+bool \hyperlink{classWallet_a1583a38c87dd04ecd5854f15590e170d}{can\+Debit\+Money} (float) const
+\begin{DoxyCompactList}\small\item\em \hyperlink{classWallet_a1583a38c87dd04ecd5854f15590e170d}{Wallet\+::can\+Debit\+Money}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classWallet_a586fc4e3fb0e9ce59e5bbafd9145d319}{bank\+Balance}
+\begin{DoxyCompactList}\small\item\em bank balance. Default value set to \$145.\+00 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classWallet}{Wallet} class keeps track of bank balance and methods for crediting/debiting account. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWallet_ad9be9e49244b78db9099fcaeccd1af04}\label{classWallet_ad9be9e49244b78db9099fcaeccd1af04}} 
+\index{Wallet@{Wallet}!Wallet@{Wallet}}
+\index{Wallet@{Wallet}!Wallet@{Wallet}}
+\subsubsection{\texorpdfstring{Wallet()}{Wallet()}}
+{\footnotesize\ttfamily Wallet\+::\+Wallet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classWallet_ad9be9e49244b78db9099fcaeccd1af04}{Wallet\+::\+Wallet} wallet constructor. Default balance \$145.\+00. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classWallet_a69b488bc31201592bb860b6fdaafa1b8}\label{classWallet_a69b488bc31201592bb860b6fdaafa1b8}} 
+\index{Wallet@{Wallet}!can\+Credit\+Money@{can\+Credit\+Money}}
+\index{can\+Credit\+Money@{can\+Credit\+Money}!Wallet@{Wallet}}
+\subsubsection{\texorpdfstring{can\+Credit\+Money()}{canCreditMoney()}}
+{\footnotesize\ttfamily bool Wallet\+::can\+Credit\+Money (\begin{DoxyParamCaption}\item[{float}]{money }\end{DoxyParamCaption}) const}
+
+
+
+\hyperlink{classWallet_a69b488bc31201592bb860b6fdaafa1b8}{Wallet\+::can\+Credit\+Money}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em money} & amount to credit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if amount to credit is positive, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWallet_a1583a38c87dd04ecd5854f15590e170d}\label{classWallet_a1583a38c87dd04ecd5854f15590e170d}} 
+\index{Wallet@{Wallet}!can\+Debit\+Money@{can\+Debit\+Money}}
+\index{can\+Debit\+Money@{can\+Debit\+Money}!Wallet@{Wallet}}
+\subsubsection{\texorpdfstring{can\+Debit\+Money()}{canDebitMoney()}}
+{\footnotesize\ttfamily bool Wallet\+::can\+Debit\+Money (\begin{DoxyParamCaption}\item[{float}]{money }\end{DoxyParamCaption}) const}
+
+
+
+\hyperlink{classWallet_a1583a38c87dd04ecd5854f15590e170d}{Wallet\+::can\+Debit\+Money}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em money} & amount to debit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if amount to debit is not greater than bank balance and amount to debit is positive, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWallet_ab9354b0a8250c0f21b867cc725a33e1e}\label{classWallet_ab9354b0a8250c0f21b867cc725a33e1e}} 
+\index{Wallet@{Wallet}!credit\+Money@{credit\+Money}}
+\index{credit\+Money@{credit\+Money}!Wallet@{Wallet}}
+\subsubsection{\texorpdfstring{credit\+Money()}{creditMoney()}}
+{\footnotesize\ttfamily void Wallet\+::credit\+Money (\begin{DoxyParamCaption}\item[{float}]{money }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classWallet_ab9354b0a8250c0f21b867cc725a33e1e}{Wallet\+::credit\+Money} credits bank balance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em money} & amount to credit bank balance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWallet_a8be722d227a610e4b36b79c2eb04c73f}\label{classWallet_a8be722d227a610e4b36b79c2eb04c73f}} 
+\index{Wallet@{Wallet}!debit\+Money@{debit\+Money}}
+\index{debit\+Money@{debit\+Money}!Wallet@{Wallet}}
+\subsubsection{\texorpdfstring{debit\+Money()}{debitMoney()}}
+{\footnotesize\ttfamily void Wallet\+::debit\+Money (\begin{DoxyParamCaption}\item[{float}]{money }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classWallet_a8be722d227a610e4b36b79c2eb04c73f}{Wallet\+::debit\+Money} debits bank balance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em money} & amount to debit bank balance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWallet_a92536035a1de76dc7842693beb93cd24}\label{classWallet_a92536035a1de76dc7842693beb93cd24}} 
+\index{Wallet@{Wallet}!get\+Bank\+Balance@{get\+Bank\+Balance}}
+\index{get\+Bank\+Balance@{get\+Bank\+Balance}!Wallet@{Wallet}}
+\subsubsection{\texorpdfstring{get\+Bank\+Balance()}{getBankBalance()}}
+{\footnotesize\ttfamily float Wallet\+::get\+Bank\+Balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\hyperlink{classWallet_a92536035a1de76dc7842693beb93cd24}{Wallet\+::get\+Bank\+Balance}. 
+
+\begin{DoxyReturn}{Returns}
+float bank\+Balance 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classWallet_a586fc4e3fb0e9ce59e5bbafd9145d319}\label{classWallet_a586fc4e3fb0e9ce59e5bbafd9145d319}} 
+\index{Wallet@{Wallet}!bank\+Balance@{bank\+Balance}}
+\index{bank\+Balance@{bank\+Balance}!Wallet@{Wallet}}
+\subsubsection{\texorpdfstring{bank\+Balance}{bankBalance}}
+{\footnotesize\ttfamily float Wallet\+::bank\+Balance\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+bank balance. Default value set to \$145.\+00 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/mnt/0896595996594878/\+Users/\+Maverick/\+Documents/\+University/\+School/\+Modules/4th Semester/\+Applied Computer Science/\+Software Eng/\+Project/\+Sprint\+\_\+02/se-\/02-\/team-\/09/\+Pencil-\/\+Producer/\hyperlink{wallet_8h}{wallet.\+h}\item 
+/mnt/0896595996594878/\+Users/\+Maverick/\+Documents/\+University/\+School/\+Modules/4th Semester/\+Applied Computer Science/\+Software Eng/\+Project/\+Sprint\+\_\+02/se-\/02-\/team-\/09/\+Pencil-\/\+Producer/\hyperlink{wallet_8cpp}{wallet.\+cpp}\end{DoxyCompactItemize}
